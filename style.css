@@ -109,7 +109,6 @@ section {
   .hero-fullscreen {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
       url('img/bg-mobile2.jpg') center/cover no-repeat;
-    background-attachment: fixed;
   }
 }
 

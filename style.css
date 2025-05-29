@@ -98,13 +98,19 @@ section {
 
 .hero-fullscreen {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-      no-repeat center center / cover;
+    url('/img/bg-desktop.jpg') no-repeat center center / cover;
   color: var(--bg-white);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background-attachment: fixed;
+}
+@media (max-width: 767.98px) {
+  .hero-fullscreen {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url('img/bg-mobile2.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+  }
 }
 
 /* Карточки и блоки */
@@ -267,4 +273,23 @@ section {
   border-radius: 4px;
   margin-bottom: 20px;
   transition: transform 0.3s;
+}
+/* @media (max-width: 991px) {
+  header .navbar-brand {
+    flex: 1;
+  }
+  header .navbar-toggler {
+    margin-left: auto;
+  }
+} */
+.left-column {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .left-column {
+    position: static; /* Сброс sticky */
+    top: auto; /* Сброс top */
+  }
 }
